@@ -1,0 +1,64 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+@import "./base/reset";
+@import "./base/fontStyle";
+
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
+
+@import "./pages/index.scss";
+@import "./pages/page1";
+@import "./pages/page2";
+@import "./pages/store";
+@import "./pages/store1";
+@import "./pages/QA";
+@import "./pages/blog";
+@import "./pages/blog-page";
+
+.hidden {
+  display: none;
+}
+
+.list {
+  ul {
+    display: flex;
+  }
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.container {
+  max-width: 1296px;
+  padding: 0 12px;
+  margin: 0 auto;
+  @media screen and(max-width:991px) {
+    max-width: 720px;
+  }
+  @media screen and(max-width:414px) {
+    max-width: 351px;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 24px;
+}
+
+//item there
+.item-container {
+  max-width: 1296px;
+  padding: 0 12px;
+  margin: 0 auto;
+  @media screen and(max-width:991px) {
+    max-width: 768px;
+    padding: 0;
+  }
+}

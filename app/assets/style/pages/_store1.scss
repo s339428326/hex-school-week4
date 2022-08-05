@@ -1,0 +1,97 @@
+.store-map {
+  display: flex;
+  gap: 0 24px;
+  margin-bottom: 80px;
+  div.store-card {
+    width: 32%;
+  }
+  iframe {
+    width: 60%;
+  }
+  @media screen and(max-width:991px) {
+    flex-direction: column;
+    iframe {
+      margin-top: 24px;
+      width: 100%;
+    }
+  }
+}
+.store-map-card {
+  width: 32%;
+
+  h3 {
+    border: 1px solid #00000020;
+    font-size: 24px;
+    color: #212529;
+    padding: 8px 24px;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #00000020;
+    padding: 15px 24px;
+  }
+  li {
+    margin-bottom: 8px;
+  }
+  li:last-child {
+    margin-bottom: 0;
+  }
+  span {
+    margin-right: 8px;
+  }
+  li,
+  a {
+    gap: 8px 0;
+    display: flex;
+    color: #212529;
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 19px;
+    line-height: 27px;
+    padding: 16px 0;
+    a {
+      color: white;
+    }
+  }
+  @media screen and(max-width:991px) {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 0 24px;
+    .store-map-image {
+      width: 50%;
+    }
+    span {
+      margin-right: 0px;
+    }
+    .store-map-info {
+      width: 50%;
+    }
+    button {
+      display: none;
+    }
+  }
+  @media screen and(max-width:414px) {
+    display: block;
+    width: 100%;
+    .store-map-image {
+      width: 100%;
+    }
+    span {
+      margin-right: 0px;
+    }
+    .store-map-info {
+      width: 100%;
+    }
+    button {
+      display: none;
+    }
+  }
+}

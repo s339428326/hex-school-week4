@@ -1,0 +1,9 @@
+//button
+@mixin button($pdy, $pdx, $fz, $lh) {
+  background-color: $primary-color;
+  color: #fff;
+  font-size: $fz;
+  line-height: $lh;
+  padding: $pdy $pdx;
+  border: none;
+}

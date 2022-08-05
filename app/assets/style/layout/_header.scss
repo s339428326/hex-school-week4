@@ -1,0 +1,119 @@
+header {
+  position: relative;
+  background-color: $primary-color;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0 15px 0;
+    h1 {
+      img {
+        width: 80px;
+        margin: 15.5px;
+      }
+    }
+
+    .down-list {
+      display: flex;
+      align-items: center;
+      li {
+        margin-left: 64px;
+      }
+      li:first-child {
+        margin-left: 0;
+      }
+      .close {
+        display: none;
+      }
+    }
+
+    span.menu {
+      display: none;
+      color: white;
+    }
+
+    @media screen and(max-width:414px) {
+      .down-list {
+        position: absolute;
+        background-color: $primary-color;
+        flex-direction: column;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        max-height: 0px;
+        transition: all 0.45s ease-in;
+        overflow: hidden;
+        z-index: 10;
+        text-align: center;
+      }
+      .down-list li {
+        width: 100%;
+        padding: 16px 0;
+        border-top: 1px solid white;
+        margin-left: 0;
+      }
+      .down-list-active {
+        max-height: 228px;
+        li:hover {
+          background-color: $tertiary-color;
+          a {
+            opacity: 0.8;
+          }
+        }
+      }
+      span.menu {
+        display: block;
+        position: absolute;
+        right: 14px;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: all 0.8s ease-in;
+        &:hover {
+          background-color: rgba(219, 218, 218, 0.802);
+        }
+      }
+
+      .material-symbols-outlined.size-36.menu {
+        font-variation-settings: "OPSZ" 40;
+        font-size: 40px;
+      }
+    }
+  }
+
+  //background-color
+  .bc-white {
+    background-color: #fff;
+  }
+
+  //item there
+  .items {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    li {
+      text-align: center;
+      width: 33.3%;
+      font-size: 32px;
+      font-weight: 500;
+      border: 1px solid #dcdcdc;
+      transition: all 0.35s ease-in;
+    }
+
+    li:hover {
+      background-color: #efefefd0;
+    }
+
+    a {
+      border-bottom: 8px solid #fff;
+      transition: all 0.35s ease-in;
+      padding: 24px 0;
+      display: block;
+      color: black;
+    }
+
+    .item-active a {
+      color: #585858;
+      border-bottom: 8px solid $primary-color;
+    }
+  }
+}
